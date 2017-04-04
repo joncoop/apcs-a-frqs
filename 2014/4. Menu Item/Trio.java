@@ -12,7 +12,11 @@ public class Trio implements MenuItem {
 	}
 	
 	public String getName() {
-		return sandwich.getName() + "/" + salad.getName() + "/" + drink.getName() + " Trio";
+		String n1 = sandwich.getName();
+		String n2 = salad.getName();
+		String n3 = drink.getName();
+		
+		return n1 + "/" + n2 + "/" + n3 + " Trio";
 	}
 
 	public double getPrice() {
