@@ -18,11 +18,8 @@ public class DiverseArray {
 	
 		int sums[] = new int[arr2D.length];
 		
-		int i = 0;
-		
-		for (int[] row: arr2D) {
-			sums[i] = arraySum(row);
-			i++;
+		for (int i = 0; i <arr2D.length; i++) {
+			sums[i] = arraySum(arr2D[i]);
 		}
 		
 		return sums;
@@ -50,21 +47,20 @@ public class DiverseArray {
 		System.out.println(arraySum(arr1));
 		
 		int[][] mat1 = {{ 1,  3, 2, 7, 3},
-				        {10, 10, 4, 6, 2},
-			      	    { 5,  3, 5, 9, 6},
-				        { 7,  6, 4, 2, 1}};
+				{10, 10, 4, 6, 2},
+			      	{ 5,  3, 5, 9, 6},
+				{ 7,  6, 4, 2, 1}};
 		
 		int[] sums = rowSums(mat1);
 		System.out.println(Arrays.toString(sums));
 
 		int[][] mat2 = {{ 1,  1,  5, 3, 4},
-				        {12,  7,  6, 1, 9},
-				        { 8, 11, 10, 2, 5},
-				        { 3,  2,  3, 0, 6}};
+			        {12,  7,  6, 1, 9},
+				{ 8, 11, 10, 2, 5},
+				{ 3,  2,  3, 0, 6}};
 		
 		System.out.println(isDiverse(mat1));
 		System.out.println(isDiverse(mat2));
-
 	}
 
 }
