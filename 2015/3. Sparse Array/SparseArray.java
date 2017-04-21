@@ -53,7 +53,8 @@ public class SparseArray {
 				entries.remove(i);
 			}
 			else if (c > col) {
-				entries.set(i, new SparseArrayEntry(r, c - 1, v));
+				SparseArrayEntry fixed = new SparseArrayEntry(r, c - 1, v);
+				entries.set(i, fixed);
 			}
 		}
 		
