@@ -17,8 +17,9 @@ public class LogMessage {
 		String space = " ";
 		
 		String searchStr = space + description + space;
+		String keyword = " " + keyword + " ";
 		
-		return searchStr.indexOf(" " + keyword + " ") != -1;
+		return searchStr.indexOf(keyword) != -1;
 	}
 	
 	public String getMachineId() {
