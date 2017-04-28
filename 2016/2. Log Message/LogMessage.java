@@ -16,7 +16,7 @@ public class LogMessage {
 		
 		String space = " ";
 		
-		String searchStr = space + description + space;
+		String searchStr = space + keword + space;
 		
 		return description.contains(space + keyword + space);
 	}
