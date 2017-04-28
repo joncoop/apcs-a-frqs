@@ -18,7 +18,7 @@ public class LogMessage {
 		
 		String searchStr = space + description + space;
 		
-		return searchStr.contains(space + keyword + space);
+		return description.contains(space + keyword + space);
 	}
 	
 	public String getMachineId() {
