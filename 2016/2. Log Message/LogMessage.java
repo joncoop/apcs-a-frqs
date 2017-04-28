@@ -17,7 +17,7 @@ public class LogMessage {
 		String space = " ";
 		
 		String searchStr = space + description + space;
-		String keyword = " " + keyword + " ";
+		String keyword = space + keyword + space;
 		
 		return searchStr.indexOf(keyword) != -1;
 	}
