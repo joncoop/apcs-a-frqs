@@ -11,13 +11,13 @@ public class StudentRecord {
 	private double average(int first, int last)  {
 		
 		double sum = 0.0;
-		int count = last - first + 1;
+		int numScores = last - first + 1;
 		
 		for (int i=first; i<=last; i++) {
 			sum += scores[i];
 		}
 		
-		return sum / count;
+		return sum / numScores;
 	}
 	
 	private boolean hasImproved() {
