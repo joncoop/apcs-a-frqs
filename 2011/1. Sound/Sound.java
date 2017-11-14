@@ -9,18 +9,14 @@ public class Sound {
 	}
 	
 	public int limitAmplitide(int limit) {
-		
 		int count = 0;
 		
-		for (int i=0; i < samples.length; i++)
-		{
-			if (samples[i] > limit)
-			{
+		for (int i=0; i < samples.length; i++) {
+			if (samples[i] > limit) {
 				samples[i] = limit;
 				count++;
 			}
-			else if (samples[i] < -limit)
-			{
+			else if (samples[i] < -limit) {
 				samples[i] = -limit;
 				count++;
 			}
@@ -32,8 +28,9 @@ public class Sound {
 	public void trimSilenceFromBeginning() {
 		int start=0; 
 		
-		while(samples[start] == 0)
+		while(samples[start] == 0) {
 			start++;
+		}
 		
 		int[] trimmed = new int[samples.length - start];
 		
@@ -44,8 +41,7 @@ public class Sound {
 		samples = trimmed;
 	}
 	
-	public String toString()
-	{
+	public String toString() {
 		return Arrays.toString(samples);
 	}
 }
