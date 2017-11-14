@@ -20,7 +20,7 @@ public class Trail {
 			}
 		}
 		
-		return max-min <= 10;
+		return max - min <= 10;
 	}
 	
 	public boolean isDifficult() {
