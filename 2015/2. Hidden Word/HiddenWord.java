@@ -17,7 +17,7 @@ public class HiddenWord {
 			if (letter.equals(guessed)) {
 				result += letter;
 			}
-			else if (word.indexOf(guessed) >= 0) {
+			else if (word.indexOf(guessed) != -1) {
 				result += "+";
 			}
 			else {
