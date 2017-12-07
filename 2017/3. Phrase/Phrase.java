@@ -28,9 +28,9 @@ public class Phrase {
     public void replaceNthOccurrence(String str, int n, String repl) {
          
         int start = findNthOccurrence(str, n);
-        int end = start + str.length();
         
         if (start > -1) {
+            int end = start + str.length();
             String before = currentPhrase.substring(0, start);
             String after = currentPhrase.substring(end);
              
