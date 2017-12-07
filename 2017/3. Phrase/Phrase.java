@@ -1,5 +1,5 @@
 public class Phrase {
-    // instance variables - replace the example below with your own
+
     private String currentPhrase;
     
     public Phrase(String p)
