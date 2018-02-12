@@ -20,7 +20,7 @@ public class Digits {
             m = digitList.get(i);
             n = digitList.get(i + 1);
             
-            if (m > n) {
+            if (m >= n) {
                 return false;
             }
         }
