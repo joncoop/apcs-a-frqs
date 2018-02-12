@@ -1,4 +1,3 @@
-
 public class Flight {
 
 	private Time departure;
