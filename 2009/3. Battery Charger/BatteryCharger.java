@@ -10,7 +10,7 @@ public class BatteryCharger {
 	public int getChargingCost(int startHour, int chargeTime) {
 		
 		int cost = 0;
-		int endHour = start + chargeTime;
+		int endHour = startHour + chargeTime;
 
 		for (int i=startHour; i<endHour; i++) {
 			cost += rateTable[i % 24];
