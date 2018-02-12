@@ -1,4 +1,3 @@
-
 public class Time {
 
 	private int hours; // use 24-hour time
