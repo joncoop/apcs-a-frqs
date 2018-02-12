@@ -10,6 +10,10 @@ public class Trip {
 	
 	public int getDuration() {
 		
+		if (flights.size() == 0) {
+		    return 0;
+		}
+	
 		int first = 0;
 		int last = flights.size() - 1;
 		
