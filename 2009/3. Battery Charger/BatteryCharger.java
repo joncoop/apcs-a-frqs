@@ -9,16 +9,11 @@ public class BatteryCharger {
 	
 	public int getChargingCost(int startHour, int chargeTime) {
 		
-		int currentHour = startHour;
-		int timeRemaining = chargeTime;
 		int cost = 0;
+		int endHour = start + chargeTime;
 
-		while (timeRemaining > 0) {
-			
-			cost += rateTable[currentHour];
-			
-			currentHour = (currentHour + 1) % 24;
-			timeRemaining -= 1;
+		for (int i=startHour; i<endHour; i++) {
+			cost += rateTable[i % 24];
 		}
 		
 		return cost;
@@ -26,18 +21,18 @@ public class BatteryCharger {
 	
 	public int getChargeStartTime(int chargeTime) {
 		
-		int time = 0;
+		int startHour = 0;
 		int low = getChargingCost(0, chargeTime);
 				
-		for (int hour=1; hour<rateTable.length; hour++) {
-			int cost = getChargingCost(hour, chargeTime);
+		for (int i=1; i<24; i++) {
+			int cost = getChargingCost(i, chargeTime);
 			
 			if (cost < low) {
 				low = cost;
-				time = hour;
+				startHour = i;
 			}
 		}
 		
-		return time;
+		return startHour;
 	}
 }
