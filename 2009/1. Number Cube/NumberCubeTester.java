@@ -17,7 +17,7 @@ public class NumberCubeTester {
 	public static int getLongestRun(int[] values) {
 
 		int start = -1;
-		int longest = 0;
+		int longest = 1;
 		int run = 0;
 
 		for (int i=0; i<values.length; i++) {
