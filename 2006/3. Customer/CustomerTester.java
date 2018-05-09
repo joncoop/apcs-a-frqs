@@ -1,6 +1,27 @@
 
 public class CustomerTester {
-
+	
+	// This isn't part of the FRQ but is an interesting problem to solve.
+	public static int numberOfUniqueCustomers(Customer[] list1, Customer[] list2) {
+		int count = list1.lenght;
+		
+		for (Customer c2: list2) {
+			boolean found = false;
+			
+			for (Customer c1: list1) {
+				if (c1.compareCustomer(c2) == 0) {
+					found = true;	
+				}
+			}
+			
+			if (!found) {
+				count++;	
+			}
+		}
+		
+		return count;
+	}
+	
 	public static void prefixMerge(Customer[] list1, Customer[] list2, Customer[] result) {
 		
 		int index1 = 0;
@@ -46,7 +67,9 @@ public class CustomerTester {
 
 		Customer[] list1 = {c1, c2, c3, c4, c5, c6, c7, c8};
 		Customer[] list2 = {c9, c10, c2, c11, c6, c7, c12};
-		Customer[] result = new Customer[6];
+		
+		int resultSize = numberOfUniqueCustomers(list1, list2)
+		Customer[] result = new Customer[resultSize];
 		
 		prefixMerge(list1, list2, result);
 		
