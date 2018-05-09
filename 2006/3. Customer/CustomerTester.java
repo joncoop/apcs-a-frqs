@@ -3,7 +3,7 @@ public class CustomerTester {
 	
 	// This isn't part of the FRQ but is an interesting problem to solve.
 	public static int numberOfUniqueCustomers(Customer[] list1, Customer[] list2) {
-		int count = list1.lenght;
+		int count = list1.length;
 		
 		for (Customer c2: list2) {
 			boolean found = false;
