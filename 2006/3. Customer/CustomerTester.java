@@ -7,7 +7,7 @@ public class CustomerTester {
 		int index2 = 0;
 		int resultIndex = 0;
 		
-		while (index1 < list1.length && index2 < list2.length && resultIndex < result.length) {
+		for (resultIndex = 0; resultIndex < result.length; resultIndex++) {
 			
 			Customer c1 = list1[index1];
 			Customer c2 = list2[index2];
@@ -25,8 +25,6 @@ public class CustomerTester {
 				index1++;
 				index2++;
 			}
-			
-			resultIndex++;
 		}
 	}
 	
