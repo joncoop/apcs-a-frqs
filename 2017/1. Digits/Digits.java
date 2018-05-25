@@ -13,7 +13,7 @@ public class Digits {
         } while (num > 0);
     }
 
-    public boolean isStrictlyIncreasing(){
+    public boolean isStrictlyIncreasing() {
         int m, n;
         
         for (int i=0; i<digitList.size() - 1; i++) {
