@@ -7,7 +7,7 @@ public class BatteryCharger {
 		this.rateTable = rateTable;
 	}
 	
-	public int getChargingCost(int startHour, int chargeTime) {
+	private int getChargingCost(int startHour, int chargeTime) {
 		
 		int cost = 0;
 		int endHour = startHour + chargeTime;
