@@ -13,7 +13,12 @@ public class Robot {
 	}
 	
 	public boolean forwardMoveBlocked() {
-		return facingRight && pos == hall.length - 1 || !facingRight && pos == 0;
+		if (facingRight) {
+			return pos == hall.length - 1 
+		}
+		else {
+			return pos == 0;
+		}
 	}
 	
 	public void move() {
@@ -37,6 +42,8 @@ public class Robot {
 	public int clearHall() {
 		
 		int count = 0;
+		
+		//System.out.println(count + ": " + Arrays.toString(hall));
 		
 		while (!hallIsClear()) {
 			move();
