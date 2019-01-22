@@ -18,15 +18,14 @@ public class Digits {
     }
 
     public boolean isStrictlyIncreasing() {
-        int m, n;
+        int prev = -1;
         
-        for (int i=0; i<digitList.size() - 1; i++) {
-            m = digitList.get(i);
-            n = digitList.get(i + 1);
-            
-            if (m >= n) {
+        for (int d: digitList) {
+            if (d <= prev) {
                 return false;
             }
+            
+            prev = d;
         }
         
         return true;
