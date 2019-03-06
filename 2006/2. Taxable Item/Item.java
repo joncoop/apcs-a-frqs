@@ -1,6 +1,6 @@
 
 public interface Item {
 
-	double purchacePrice();
+	double purchasePrice();
 	
 }
