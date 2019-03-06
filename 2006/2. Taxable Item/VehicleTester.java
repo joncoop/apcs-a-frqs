@@ -10,7 +10,7 @@ public class VehicleTester {
 		
 		v.changeMarkup(1000.00);
 		System.out.println(v.getListPrice());
-		System.out.println(v.purchacePrice());
+		System.out.println(v.purchasePrice());
 		
 	}
 
