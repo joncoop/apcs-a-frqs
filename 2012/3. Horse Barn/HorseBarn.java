@@ -26,8 +26,7 @@ public class HorseBarn {
 		
 		int loc = 0;
 		
-		for (Horse h: spaces) {
-						
+		for (Horse h: spaces) {		
 			if (h != null) {
 				temp[loc] = h;
 				loc++;
