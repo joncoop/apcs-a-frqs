@@ -1,6 +1,6 @@
 public class FrogSimulation
 {
-    /** Dinstance, in inches, from the starting point to the goal. */
+    /** Distance, in inches, from the starting point to the goal. */
     private int goalDistance;
     
     /** Maximum number of hops allowed to reach the goal. */
