@@ -4,7 +4,6 @@ import java.util.List;
 
 public class RandomStringChooser {
 
-
 	private List<String> wordList;
 	
 	public RandomStringChooser(String[] wordArr) {
