@@ -14,13 +14,12 @@ public class GrayImage {
 		
 		int count = 0;
 		
-		for (int r=0; r<pixelValues.length; r++) {
-			for (int c=0; c<pixelValues[r].length; c++) {
+		for (int[] row: pixelValues) {
+			for (int value: row) {
 				
-				if (pixelValues[r][c] == WHITE) {
+				if (value == WHITE) {
 					count++;
-				}
-				
+				}	
 			}
 		}
 		
