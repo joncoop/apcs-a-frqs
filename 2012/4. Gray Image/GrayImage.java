@@ -14,8 +14,8 @@ public class GrayImage {
 		
 		int count = 0;
 		
-		for (int[] row: pixelValues) {
-			for (int value: row) {
+		for (int[] row : pixelValues) {
+			for (int value : row) {
 				
 				if (value == WHITE) {
 					count++;
@@ -27,13 +27,13 @@ public class GrayImage {
 	}
 	
 	public void processImage() {
-		int rows = pixelValues.length;
-		int cols = pixelValues[0].length;
+		int numRows = pixelValues.length - 2;
+		int numCols = pixelValues[0].length - 2;
 		
-		for (int r=0; r<rows-2; r++) {
-			for (int c=0; c<cols-2; c++) {
+		for (int r = 0; r < numRows; r++) {
+			for (int c = 0; c < numCols; c++) {
 				
-				pixelValues[r][c] -= pixelValues[r+2][c+2];
+				pixelValues[r][c] -= pixelValues[r + 2][c + 2];
 					
 				if (pixelValues[r][c] < BLACK) {
 					pixelValues[r][c] = BLACK;
@@ -45,11 +45,9 @@ public class GrayImage {
 	public String toString() {
 		String result = "GrayImage:\n";
 		
-		for (int r=0; r<pixelValues.length; r++) {
-			for (int c=0; c<pixelValues[r].length; c++) {
-				
-				result += "  " + pixelValues[r][c] + "\t";
-				
+		for (int r = 0; r < pixelValues.length; r++) {
+			for (int c = 0; c < pixelValues[r].length; c++) {
+				result += "  " + pixelValues[r][c] + "\t";	
 			}
 			
 			result += "\n";
@@ -57,5 +55,4 @@ public class GrayImage {
 		
 		return result.trim();
 	}
-
 }
