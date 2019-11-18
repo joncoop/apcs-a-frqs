@@ -12,12 +12,8 @@ public class Trail {
 		int min = markers[start];
 		
 		for (int i=start+1; i<=end; i++) {
-			if (markers[i] > max) {
-				max = markers[i];
-			}
-			else if (markers[i] < min) {
-				min = markers[i];
-			}
+			max = Math.max(markers[i], max);
+			min = Math.min(markers[i], min);
 		}
 		
 		return max - min <= 10;
