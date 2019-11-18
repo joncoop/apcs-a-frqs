@@ -32,13 +32,9 @@ public class Trail {
 			
 			if (diff >= 30) {
 				changes++;
-				
-				if (changes > 2) {
-					return true;
-				}
 			}
 		}
 		
-		return false;
+		return changes > 2;
 	}
 }
