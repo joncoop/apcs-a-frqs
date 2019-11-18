@@ -35,6 +35,6 @@ public class Trail {
 			}
 		}
 		
-		return changes > 2;
+		return changes >= 3;
 	}
 }
