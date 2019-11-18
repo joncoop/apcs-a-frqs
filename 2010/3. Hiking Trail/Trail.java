@@ -2,11 +2,11 @@ public class Trail {
 	
 	public int[] markers;
 	
-	public Trail(int[] m) {
-		markers = new int[m.length];
+	public Trail(int[] markers) {
+		this.markers = new int[markers.length];
 		
-		for (int i=0; i<m.length; i++) {
-			markers[i] = m[i];	
+		for (int i=0; i<markers.length; i++) {
+			this.markers[i] = markers[i];	
 		}
 	}
 	
