@@ -3,7 +3,11 @@ public class Trail {
 	public int[] markers;
 	
 	public Trail(int[] m) {
-		markers = m;
+		markers = new int[m.length];
+		
+		for (int i=0; i<m.length; i++) {
+			markers[i] = m[i];	
+		}
 	}
 	
 	public boolean isLevelTrailSegment(int start, int end) {
