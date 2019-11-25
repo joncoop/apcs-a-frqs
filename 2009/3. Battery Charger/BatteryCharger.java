@@ -12,8 +12,8 @@ public class BatteryCharger {
 		int cost = 0;
 		int endHour = startHour + chargeTime;
 
-		for (int i=startHour; i<endHour; i++) {
-			cost += rateTable[i % 24];
+		for (int hour = startHour; hour < endHour; hour++) {
+			cost += rateTable[hour % 24];
 		}
 		
 		return cost;
@@ -24,12 +24,12 @@ public class BatteryCharger {
 		int startHour = 0;
 		int low = getChargingCost(0, chargeTime);
 				
-		for (int i=1; i<24; i++) {
-			int cost = getChargingCost(i, chargeTime);
+		for (int hour = 1; hour < 24; i++) {
+			int cost = getChargingCost(hour, chargeTime);
 			
 			if (cost < low) {
 				low = cost;
-				startHour = i;
+				startHour = hour;
 			}
 		}
 		
