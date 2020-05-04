@@ -10,7 +10,7 @@ public class StepTracker
     public StepTracker(int activeLimit) {
         this.totalSteps = 0;
         this.totalDays = 0;
-        this. activeDays = 0;
+        this.activeDays = 0;
         this.activeLimit = activeLimit;
     }
 
