@@ -13,12 +13,12 @@ public class FuelDepot {
 	public int nextTankToFill(int threshold) {
 		
 		int loc = filler.getCurrentIndex();
-		int low = tanks.get(loc).getFuelLevel();
+		int low = threshold;
 		
 		for (int i=0; i<tanks.size(); i++) {
 			int level = tanks.get(i).getFuelLevel();
 			
-			if (level <= threshold && level < low) {
+			if (level <= low) {
 				loc = i;
 				low = level;
 			}
@@ -30,9 +30,9 @@ public class FuelDepot {
 	public void moveToLocation(int locIndex) {
 		
 		int currentLoc = filler.getCurrentIndex();
+		boolean facingRight = filler.isFacingRight();
 		
-		if (filler.isFacingRight() && locIndex < currentLoc ||
-			!filler.isFacingRight() && locIndex > currentLoc) {
+		if (facingRight() && locIndex < currentLoc || !facingRight() && locIndex > currentLoc) {
 			filler.changeDirection();
 		}
 		
