@@ -8,7 +8,9 @@ public class CombinedTable
     }
 
     public boolean canSeat(int n) {
-        return t1.getNumSeats() + t2.getNumSeats() - 2 >= n;
+        int capacity = t1.getNumSeats() + t2.getNumSeats() - 2;
+        
+        return capacity >= n;
     }
 
     public double getDesireablity() {
@@ -17,13 +19,12 @@ public class CombinedTable
         double h1 = t1.getHeight();
         double h2 = t2.getHeight();
 
-        double avg = (d1 + d2) / 2;
+        double desirability = (d1 + d2) / 2;
 
         if (h1 != h2) {
-            return avg - 10.0;
+            desirability -= 10.0;
         }
-        else {
-            return avg;
-        }
+
+        return desirability;
     }
 }
