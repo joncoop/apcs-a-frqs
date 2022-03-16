@@ -7,6 +7,10 @@ public class StepTracker
     private int activeDays;
     private int activeLimit;
 
+    /** Constructor for a StepTracker
+     *
+     * @param activeLimit  The minimum number of steps for a day to be considered active.
+     */
     public StepTracker(int activeLimit) {
         this.totalSteps = 0;
         this.totalDays = 0;
@@ -15,7 +19,7 @@ public class StepTracker
     }
 
     /** Accumulates information about steps, in readings taken once per day
-        activeDays, which returns the number of active days
+     *  activeDays, which returns the number of active days
      */
     public void addDailySteps(int steps) {
         totalSteps += steps;
@@ -33,13 +37,13 @@ public class StepTracker
     }
 
     /** Returns the average number of steps per day, calculated by dividing the
-        total number of steps taken by the number of days tracked
+     *  total number of steps taken by the number of days tracked
      */
     public double averageSteps() {
-        if (totalDays == 0 ) {
+        if (totalDays == 0) {
            return 0.0;
         }
 
-        return (double)totalSteps / totalDays;
+        return (double) totalSteps / totalDays;
     }
 }
