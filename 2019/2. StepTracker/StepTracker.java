@@ -1,21 +1,19 @@
-import java.util.ArrayList;
-
 public class StepTracker
 {
+    private int activeLimit;
     private int totalSteps;
     private int totalDays;
     private int activeDays;
-    private int activeLimit;
 
     /** Constructor for a StepTracker
      *
      * @param activeLimit  The minimum number of steps for a day to be considered active.
      */
     public StepTracker(int activeLimit) {
+        this.activeLimit = activeLimit;
         this.totalSteps = 0;
         this.totalDays = 0;
         this.activeDays = 0;
-        this.activeLimit = activeLimit;
     }
 
     /** Accumulates information about steps, in readings taken once per day
