@@ -1,9 +1,9 @@
 public class StepTracker
 {
     private int activeLimit;
-    private int totalSteps;
-    private int totalDays;
-    private int activeDays;
+    private int totalSteps = 0;
+    private int totalDays = 0;
+    private int activeDays = 0;
 
     /** Constructor for a StepTracker
      *
@@ -11,9 +11,6 @@ public class StepTracker
      */
     public StepTracker(int activeLimit) {
         this.activeLimit = activeLimit;
-        this.totalSteps = 0;
-        this.totalDays = 0;
-        this.activeDays = 0;
     }
 
     /** Accumulates information about steps, in readings taken once per day
