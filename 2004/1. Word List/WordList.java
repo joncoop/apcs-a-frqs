@@ -19,7 +19,7 @@ public class WordList
     {
         int count = 0;
         
-        for (String w : myList)
+        for (String w: myList)
         {
             if (w.length() == len)
             {
@@ -34,7 +34,7 @@ public class WordList
     {
         String word;
         
-        for (int i=myList.size()-1; i>=0; i--)
+        for (int i = myList.size() - 1; i >= 0; i--)
         {
             word = myList.get(i);
             
