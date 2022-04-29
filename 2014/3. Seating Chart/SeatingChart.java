@@ -10,8 +10,8 @@ public class SeatingChart {
 		seats = new Student[rows][cols];
 		int i = 0;
 		
-		for (int c=0; c<cols; c++) {
-			for (int r=0; r<rows; r++) {
+		for (int c = 0; c < cols; c++) {
+			for (int r = 0; r < rows; r++) {
 				if (i < studentList.size()) {
 					seats[r][c] = studentList.get(i);				
 					i++;
@@ -24,9 +24,8 @@ public class SeatingChart {
 		
 		int count = 0;
 		
-		for (int r=0; r<seats.length; r++) {
-			for (int c=0; c<seats[r].length; c++) {
-				
+		for (int r = 0; r < seats.length; r++) {
+			for (int c = 0; c<seats[r].length; c++) {
 				Student s = seats[r][c];
 				
 				if (s != null) {
@@ -44,10 +43,10 @@ public class SeatingChart {
 	public String toString() {
 		String result = "SeatingChart:\n";
 		
-		for (int r=0; r<seats.length; r++) {
+		for (int r = 0; r < seats.length; r++) {
 			result += "  ";
 			
-			for (int c=0; c<seats[r].length; c++) {
+			for (int c = 0; c < seats[r].length; c++) {
 				Student s = seats[r][c];
 				
 				if (s != null) {
