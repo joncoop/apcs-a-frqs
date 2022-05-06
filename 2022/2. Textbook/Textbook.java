@@ -1,6 +1,5 @@
 public class Textbook extends Book
 {
-    // instance variables - replace the example below with your own
     private int edition;
 
     public Textbook(String bookTitle, double bookPrice, int bookEdition)
