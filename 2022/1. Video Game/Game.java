@@ -31,6 +31,10 @@ public class Game
             }
         }
         
+        if isBonus() {
+            score *= 3;    
+        }
+        
         return score;
     }
     
