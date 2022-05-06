@@ -6,9 +6,9 @@ public class Data
     public void repopulate() {
         for (int row = 1; row < grid.length; row++) {
             for (int col = 0; col < grid[0].length; col++) {
-                int r = 0;
+                int r = 0; // is div by 100, so loop is entered
                 
-                while (r % 10 == 0 && r % 100 != 0) {
+                while (r % 10 != 0 || r % 100 == 0) {
                     r = (int)(MAX * Math.random() + 1);
                 }
                 
