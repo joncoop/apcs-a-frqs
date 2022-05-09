@@ -20,14 +20,18 @@ public class ReviewAnalysis
    
    public ArrayList<String> collectComments() {
        ArrayList<String> comments = new ArrayList<String>();
-       int n = 0;
        
-       for (Review r: allReviews) {
-           String c = r.getComment();
+       for (int i = o; i < allReviews.length; i++) {
+           String comment = allReviews[i].getComment();
            
-           if (c.indexOf("!") != -1) {
-               comments.add(n + "-" + c);
-               n++;
+           if (comment.indexOf("!") != -1) {
+               String last = comment.substring(comment.length() - 1);
+              
+               if (!last.equals(".") && !last.equals(".")) {
+                   comment += ".";  
+               }
+              
+               comments.add(i + "-" + comment);
            }
        }
        
