@@ -4,7 +4,7 @@ public class Data
     private int[][] grid;
     
     public void repopulate() {
-        for (int row = 1; row < grid.length; row++) {
+        for (int row = 0; row < grid.length; row++) {
             for (int col = 0; col < grid[0].length; col++) {
                 int r = 0; // any value that gets into the loop once works here
                 
