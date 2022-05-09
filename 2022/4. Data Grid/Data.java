@@ -8,8 +8,8 @@ public class Data
             for (int col = 0; col < grid[0].length; col++) {
                 int r = 0; // any value that gets into the loop once works here
                 
-                while (r % 10 != 0 || r % 100 == 0) {
-                    r = (int)(MAX * Math.random() + 1);
+                while (r % 100 == 0) {
+                    r = 10 * (int)(MAX / 10 * Math.random() + 1);
                 }
                 
                 grid[row][col] = r;
