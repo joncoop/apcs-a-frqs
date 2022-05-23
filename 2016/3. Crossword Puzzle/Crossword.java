@@ -4,20 +4,14 @@ public class Crossword {
 	private Square[][] puzzle;
 	
 	public Crossword(boolean[][] blackSquares) {
-		
-		int rows = blackSquares.length;
-		int cols = blackSquares[0].length;
-		
 		puzzle = new Square[rows][cols];
-		
 		int label = 1;
 		
-		for (int r=0; r<rows; r++) {
-			for (int c=0; c<cols; c++) {
-				
-				int num;
+		for (int r = 0; r < blackSquares.length; r++) {
+			for (int  c= 0; c < blackSquares[0].length; c++) {
 				boolean isBlack = blackSquares[r][c];
 				boolean toLabel = toBeLabeled(r, c, blackSquares);
+				int num;
 				
 				if (toLabel) {
 					num = label;
@@ -44,10 +38,10 @@ public class Crossword {
 	public String toString() {
 		String result = "CrosswordPuzzle:\n";
 		
-		for (int r=0; r<puzzle.length; r++) {
+		for (int r = 0; r < puzzle.length; r++) {
 			result += "  ";
 			
-			for (int c=0; c<puzzle[r].length; c++) {
+			for (int c = 0; c < puzzle[r].length; c++) {
 				result += puzzle[r][c] + " ";
 			}
 			
