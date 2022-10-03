@@ -10,9 +10,9 @@ public class HiddenWord {
 	public String getHint(String guess) {
 		String result = "";
 		
-		for (int i=0; i<word.length(); i++) {
-			String letter = word.substring(i, i+1);
-			String guessed = guess.substring(i, i+1);
+		for (int i = 0; i < word.length(); i++) {
+			String letter = word.substring(i, i + 1);
+			String guessed = guess.substring(i, i + 1);
 			
 			if (letter.equals(guessed)) {
 				result += letter;
