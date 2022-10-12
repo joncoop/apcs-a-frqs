@@ -9,7 +9,7 @@ public class Textbook extends Book
     }
 
     public String getBookInfo() {
-        return super.getBookInfo() + "-" + getEdition();
+        return super.getBookInfo() + "-" + edition;
     }
     
     public boolean canSubstituteFor(Textbook other) {
