@@ -40,7 +40,6 @@ public class Robot {
 	}
 	
 	public int clearHall() {
-		
 		int count = 0;
 				
 		while (!hallIsClear()) {
