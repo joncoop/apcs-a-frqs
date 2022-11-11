@@ -42,14 +42,10 @@ public class Robot {
 	public int clearHall() {
 		
 		int count = 0;
-		
-		//System.out.println(count + ": " + Arrays.toString(hall));
-		
+				
 		while (!hallIsClear()) {
 			move();
 			count++;
-			
-			//System.out.println(count + ": " + Arrays.toString(hall));
 		}
 		
 		return count;
