@@ -13,7 +13,7 @@ public class StudentRecord {
 		double sum = 0.0;
 		int numScores = last - first + 1;
 		
-		for (int i=first; i<=last; i++) {
+		for (int i = first; i <= last; i++) {
 			sum += scores[i];
 		}
 		
@@ -22,7 +22,7 @@ public class StudentRecord {
 	
 	private boolean hasImproved() {
 				
-		for (int i=0; i<scores.length-1; i++) {
+		for (int i = 0; i < scores.length - 1; i++) {
 			if (scores[i+1] < scores[i]) {
 				return false;
 			}
