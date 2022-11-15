@@ -5,7 +5,6 @@ public class SelfDivisor {
 		int digits = number;
 
 		while (digits > 0) {
-
 			int digit = digits % 10;
 
 			if (digit == 0 || number % digit != 0) {
