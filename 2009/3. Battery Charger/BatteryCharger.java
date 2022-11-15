@@ -24,7 +24,7 @@ public class BatteryCharger {
 		int startHour = 0;
 		int low = getChargingCost(0, chargeTime);
 				
-		for (int hour = 1; hour < 24; i++) {
+		for (int hour = 1; hour < 24; hour++) {
 			int cost = getChargingCost(hour, chargeTime);
 			
 			if (cost < low) {
