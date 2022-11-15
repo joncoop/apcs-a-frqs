@@ -1,7 +1,6 @@
 public class SelfDivisor {
 
 	public static boolean isSelfDivisor(int number) {
-
 		int digits = number;
 
 		while (digits > 0) {
