@@ -12,29 +12,29 @@ public class Trail {
 	
 	public boolean isLevelTrailSegment(int start, int end) {
 		
-		int max = markers[start];
-		int min = markers[start];
+		int high = markers[start];
+		int low = markers[start];
 		
-		for (int i  =start + 1; i<=end; i++) {
-			max = Math.max(markers[i], max);
-			min = Math.min(markers[i], min);
+		for (int i = start + 1; i <= end; i++) {
+			high = Math.max(markers[i], max);
+			low = Math.min(markers[i], min);
 		}
 		
-		return max - min <= 10;
+		return high - low <= 10;
 	}
 	
 	public boolean isDifficult() {
 		
-		int changes = 0;
+		int bigChanges = 0;
 		
 		for (int i = 0; i < markers.length - 1; i++) {
-			int diff = Math.abs(markers[i] - markers[i+1]);
+			int diff = Math.abs(markers[i] - markers[i + 1]);
 			
 			if (diff >= 30) {
-				changes++;
+				bigChanges++;
 			}
 		}
 		
-		return changes >= 3;
+		return bigChanges >= 3;
 	}
 }
