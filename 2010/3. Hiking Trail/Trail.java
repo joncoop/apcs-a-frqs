@@ -5,7 +5,7 @@ public class Trail {
 	public Trail(int[] markers) {
 		this.markers = new int[markers.length];
 		
-		for (int i=0; i<markers.length; i++) {
+		for (int i = 0; i<markers.length; i++) {
 			this.markers[i] = markers[i];	
 		}
 	}
@@ -15,7 +15,7 @@ public class Trail {
 		int max = markers[start];
 		int min = markers[start];
 		
-		for (int i=start+1; i<=end; i++) {
+		for (int i  =start + 1; i<=end; i++) {
 			max = Math.max(markers[i], max);
 			min = Math.min(markers[i], min);
 		}
@@ -27,7 +27,7 @@ public class Trail {
 		
 		int changes = 0;
 		
-		for (int i=0; i<markers.length-1; i++) {
+		for (int i = 0; i < markers.length - 1; i++) {
 			int diff = Math.abs(markers[i] - markers[i+1]);
 			
 			if (diff >= 30) {
