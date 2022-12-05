@@ -41,7 +41,7 @@ public class ClimbingClub {
 		
 		for (int i = 0; i < climbList.size() - 1; i++) {
 			String current = climbList.get(i).getName();
-			String next = climbList.get(i+1).getName();
+			String next = climbList.get(i + 1).getName();
 			
 			if (!current.equals(next)) {
 				count++;
