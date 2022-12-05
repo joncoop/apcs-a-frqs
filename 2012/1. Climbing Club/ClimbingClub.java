@@ -14,10 +14,8 @@ public class ClimbingClub {
 		ClimbInfo climb = new ClimbInfo(peakName, climbTime);
 		// Part a: climbList.add(climb);
 		
-		// Part b:		
-		int i = 0;
-		while (i < climbList.size() && !added) {
-
+		// Part b:
+		for (int i = 0; i < climbList.size(); i++) {
 			ClimbInfo c = climbList.get(i);
 			String name = c.getName();
 			
@@ -25,8 +23,6 @@ public class ClimbingClub {
 				climbList.add(i, climb);
 				return;
 			}
-			
-			i++;
 		}
 		
 		climbList.add(climb);
@@ -43,7 +39,7 @@ public class ClimbingClub {
 		
 		int count = 1;
 		
-		for (int i=0; i<climbList.size() - 1; i++) {
+		for (int i = 0; i < climbList.size() - 1; i++) {
 			String current = climbList.get(i).getName();
 			String next = climbList.get(i+1).getName();
 			
