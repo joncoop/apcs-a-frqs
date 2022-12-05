@@ -14,9 +14,7 @@ public class ClimbingClub {
 		ClimbInfo climb = new ClimbInfo(peakName, climbTime);
 		// Part a: climbList.add(climb);
 		
-		// Part b:
-		boolean added = false;
-		
+		// Part b:		
 		int i = 0;
 		while (i < climbList.size() && !added) {
 
@@ -25,15 +23,13 @@ public class ClimbingClub {
 			
 			if (peakName.compareTo(name) < 0) {
 				climbList.add(i, climb);
-				added = true;
+				return;
 			}
 			
 			i++;
 		}
 		
-		if (!added) {
-			climbList.add(climb);
-		}
+		climbList.add(climb);
 	}
 	
 	public int distinctPeakNames() {
