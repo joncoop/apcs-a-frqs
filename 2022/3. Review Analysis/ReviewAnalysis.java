@@ -21,7 +21,7 @@ public class ReviewAnalysis
    public ArrayList<String> collectComments() {
        ArrayList<String> comments = new ArrayList<String>();
        
-       for (int i = o; i < allReviews.length; i++) {
+       for (int i = 0; i < allReviews.length; i++) {
            String comment = allReviews[i].getComment();
            
            if (comment.indexOf("!") != -1) {
