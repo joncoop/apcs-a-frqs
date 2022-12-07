@@ -42,8 +42,8 @@ public class Delimiters
             if (d.equals(openDel)) {
                 numOpen += 1;
             }
-            else if (d.equals(closeDel)) {
-              numOpen -= 1;
+            else {
+                numOpen -= 1;
             }
 
             if (numOpen < 0) {
