@@ -31,27 +31,27 @@ public class LightBoard
     */
     public boolean evaluateLight(int row, int col)
     {
-        int count = 0;
+        int numOnInColumn = 0;
 
         for (int r = 0; r < lights.length; r++) {
             if (lights[r][col]) {
-                count++;
+                numOnInColumn++;
             }
         }
 
-        boolean on = lights[row][col];
-        boolean even = count % 2;
-        boolean divBy3 = count % 3;
+        boolean isOn = lights[row][col];
+        boolean isEven = numOnInColumn % 2;
+        boolean isDivBy3 = numOnInColumn % 3;
 
-        if (on && even) {
+        if (isOn && isEven) {
             return false;
         }
         
-        if (!on && divBy3) {
+        if (!isOn && isDivBy3) {
             return true;
         }
 
-        return on;
+        return isOn;
     }
 
     public String toString() {
