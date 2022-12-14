@@ -11,6 +11,7 @@ public class WordPairList
             for (int j = i + 1; j < words.length; j++) {
                 String first = words[i];
                 String second = words[j];
+                
                 WordPair pair = new WordPair(first, second);
                 allPairs.add(pair);
             }
