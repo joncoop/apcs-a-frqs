@@ -7,7 +7,7 @@ public class DiverseArray {
 		
 		int sum = 0;
 		
-		for (int n : arr) {
+		for (int n: arr) {
 			sum += n;
 		}
 		
@@ -18,7 +18,7 @@ public class DiverseArray {
 	
 		int sums[] = new int[arr2D.length];
 		
-		for (int i = 0; i <arr2D.length; i++) {
+		for (int i = 0; i < arr2D.length; i++) {
 			sums[i] = arraySum(arr2D[i]);
 		}
 		
@@ -29,8 +29,8 @@ public class DiverseArray {
 		
 		int[] sums = rowSums(arr2D);
 		
-		for(int i=0; i<sums.length - 1; i++) {
-			for (int j=i+1; j<sums.length; j++) {
+		for(int i = 0; i < sums.length - 1; i++) {
+			for (int j = i + 1; j < sums.length; j++) {
 				if (sums[i] == sums[j]) {
 					return false;
 				}
