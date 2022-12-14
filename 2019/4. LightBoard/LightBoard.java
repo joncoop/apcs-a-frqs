@@ -40,16 +40,18 @@ public class LightBoard
         }
 
         boolean on = lights[row][col];
+        boolean even = count % 2;
+        boolean divBy3 = count % 3;
 
-        if (on && count % 2 == 0) {
+        if (on && even) {
             return false;
         }
-        else if (!on && count % 3 == 0) {
+        
+        if (!on && divBy3) {
             return true;
         }
-        else {
-            return on;
-        }
+
+        return on;
     }
 
     public String toString() {
