@@ -26,6 +26,7 @@ public class Data
             for (int row = 1; row < grid.length; row++) {
                 if (grid[row][col] < grid[row - 1][col]) {
                     increasing = false;
+                    break; // makes code slightly more efficient, but break is not in AP Java subset
                 }
             }
             
