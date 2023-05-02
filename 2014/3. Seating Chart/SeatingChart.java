@@ -23,8 +23,8 @@ public class SeatingChart {
 		seats = new Student[rows][cols];
 		
 		for (int i = 0; i < studentList.size(); i++) {
-			r = i % rows;
-			c = i // rows;
+			int r = i % rows;
+			int c = i / rows;
 			
 			seats[r][c] = studentList.get(i);
 		}
