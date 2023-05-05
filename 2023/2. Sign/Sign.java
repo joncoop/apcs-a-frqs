@@ -20,10 +20,9 @@ public class Sign {
 
     public String getLines() {
         String result = "";
-        int numLines = numberOfLines();
         int start, end;
 
-        for (int i = 0; i < numLines; i++) {
+        for (int i = 0; i < numberOfLines(); i++) {
             start = i * width;
             end = start + width;
 
@@ -31,7 +30,7 @@ public class Sign {
 
             result += text.substring(start, end);
 
-            if (i < numLines - 1) {
+            if (i < numberOfLines() - 1) {
                 result += ";";
             }
         }
