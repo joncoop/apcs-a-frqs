@@ -26,7 +26,7 @@ public class WeatherData {
                 longestStreak = Math.max(currentStreak, longestStreak);
             }
             else {
-                currentStreak = 1;
+                currentStreak = 0;
             }
         }
 
