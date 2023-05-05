@@ -20,6 +20,8 @@ public class AppointmentBook {
                     return minute;
                 }
             }
+            
+            minute++;
         }
 
         return -1;
