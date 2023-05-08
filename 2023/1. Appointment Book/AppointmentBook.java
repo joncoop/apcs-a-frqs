@@ -8,9 +8,10 @@ public class AppointmentBook {
     }
 
     public int findFreeBlock(int period, int duration) {
+        int startMinute = 0;
         int lastPossibleMinute = 60 - duration;
         
-        for (int minute = 0; minute <= lastPossibleMinute; minute++) {
+        while (startMinute <= lastPossibleMinute) {
             int freeMinutes = 0;
 
             while (isMinuteFree(period, minute + freeMinutes)) {
@@ -20,6 +21,8 @@ public class AppointmentBook {
                     return minute;
                 }
             }
+            
+            startMinute += freeMinutes + 1;
         }
 
         return -1;
