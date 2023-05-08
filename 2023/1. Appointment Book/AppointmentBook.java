@@ -8,21 +8,21 @@ public class AppointmentBook {
     }
 
     public int findFreeBlock(int period, int duration) {
-        int startMinute = 0;
-        int lastPossibleMinute = 60 - duration;
+        int consectutiveFreeMinutes = 0;
         
-        while (startMinute <= lastPossibleMinute) {
-            int freeMinutes = 0;
-
-            while (isMinuteFree(period, minute + freeMinutes)) {
-                freeMinutes++;
-
-                if (freeMinutes == duration) {
-                    return minute;
+        while (minute < 60) {
+            if (isMinuteFree(period, minute)) {
+                consectutiveFreeMinutes++;
+                
+                if (consectutiveFreeMinutes == duration) {
+                    return minute - freeMinutes + 1;
                 }
             }
+            else {
+               consectutiveFreeMinutes = 0; 
+            }
             
-            startMinute += freeMinutes + 1;
+            minute++;
         }
 
         return -1;
