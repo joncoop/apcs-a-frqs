@@ -19,6 +19,10 @@ public class Sign {
     }
 
     public String getLines() {
+        if (text.length() == 0) {
+            return null;
+        }
+        
         String result = "";
         int start, end;
 
