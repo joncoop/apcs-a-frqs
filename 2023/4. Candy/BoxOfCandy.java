@@ -13,6 +13,7 @@ public class BoxOfCandy {
             if (piece != null) {
                 box[0][col] = piece;
                 box[row][col] = null;
+                return true;
             }
         }
 
@@ -24,7 +25,7 @@ public class BoxOfCandy {
             for (int col = 0; col < box[0].length; col++) {
                 Candy piece = box[row][col];
 
-                if (piece != null) {
+                if (piece != null && piece.getFlavor.equals(flavor)) {
                     box[row][col] = null;
                     return piece;
                 }
