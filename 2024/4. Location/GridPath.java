@@ -11,25 +11,28 @@ public class GridPath
     */
     public Location getNextLoc(int row, int col)
     {
-        int below = Integer.MAX_INT;
-        int right = Integer.MAX_INT;
+        Location rightLoc = new Location(row, col + 1);
+        Location belowLoc = new Location(row + 1, col);
 
-        if (row < grid.length() - 1) {
-            int below = grid[row + 1][col];
-        }
+        boolean atBottom = row < grid.length - 1;
+        boolean atRight = row < grid[0].length - 1;
 
-        if (col < grid[row].length() - 1) {
-            int right = grid[row][col + 1];
+        if (atBottom) {
+            return rightLoc;
         }
+        else if (atRight) {
+            return belowLoc;
+        }
+            
+        int belowValue = grid[row + 1][col];
+        int rightValue =  grid[row][col + 1];
         
-        if (below < right) {
-            row += 1;
+        if (belowValue < rightValue) {
+            return belowLoc;
         }
         else {
-            col += 1
+            return rightLoc;
         }
-
-        return new Location(row, col);
     }
 
     /**
@@ -40,8 +43,8 @@ public class GridPath
     */
     public int sumPath(int row, int col)
     {
-        int endRow = grid.length() - 1;
-        int endCol = grid[0].length() - 1;
+        int endRow = grid.length - 1;
+        int endCol = grid[0].length - 1;
         int sum = 0;
 
         while (row < endRow || col < endCol) {
