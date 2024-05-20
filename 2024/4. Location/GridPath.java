@@ -14,18 +14,18 @@ public class GridPath
         int below = Integer.MAX_INT;
         int right = Integer.MAX_INT;
 
-        if (row < grid.length()) {
+        if (row < grid.length() - 1) {
             int below = grid[row + 1][col];
         }
 
-        if (col < grid[row].length()) {
+        if (col < grid[row].length() - 1) {
             int right = grid[row][col + 1];
         }
         
         if (below < right) {
             row += 1;
         }
-        else  {
+        else {
             col += 1
         }
 
