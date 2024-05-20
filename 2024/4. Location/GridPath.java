@@ -14,13 +14,13 @@ public class GridPath
         Location rightLoc = new Location(row, col + 1);
         Location belowLoc = new Location(row + 1, col);
 
-        boolean atBottom = row < grid.length - 1;
-        boolean atRight = row < grid[0].length - 1;
+        boolean atBottomEdge = row == grid.length - 1;
+        boolean atRightEdge = col == grid[0].length - 1;
 
-        if (atBottom) {
+        if (atBottomEdge) {
             return rightLoc;
         }
-        else if (atRight) {
+        else if (atRightEdge) {
             return belowLoc;
         }
             
