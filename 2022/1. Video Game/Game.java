@@ -46,7 +46,7 @@ public class Game
             int score = this.getScore();
             
             if (score > high) {
-                score = high;
+                high = score;
             }
         }
         
